@@ -9,6 +9,8 @@ let guessedNumberContainer = document.getElementById("numeri_indovinati");
 // Variabile per il contenitore della quantità dei numeri indovinati
 let guessedQuantity = document.getElementById("quantita_numeri_indovinati");
 
+let timerContainer = document.getElementById("timer");
+
 
 // variabile di quanti numeri prendere
 n=5;
@@ -23,7 +25,7 @@ console.log("i numeri casuali sono:", numberToGuess.toString());
 // viene printato anche nella pagina web
 numberContainer.innerHTML = numberToGuess.toString();
 // Un instante prima di chiedere i numeri, questi scompaiono
-setTimeout(deleteToGuessNumbers, 4900);
+setTimeout(deleteToGuessNumbers, 29000);
 
 function deleteToGuessNumbers(){
     numberContainer.classList.add("hidden")
@@ -31,9 +33,14 @@ function deleteToGuessNumbers(){
 }
 
 // Viene richiamata una funzione 30 secondi dopo
-setTimeout(richiestaGuess, 5000);
+setTimeout(richiestaGuess, 30000);
 // La funzione chiede 5 volte all'utente per i numeri da indovinare, poi mette ciascun numero dentro l'array dei guess dell'utente
 function richiestaGuess(){
+
+    // function timerFunction = 
+    //     timerContainer.innerHTML = " ";
+    //     let seconds = i;
+    //     timerContainer.innerHTML = seconds;
    
     for (i = 0; i < 5; i++){
         let askNumbers = parseInt(prompt("scrivi uno alla volta il numero"));

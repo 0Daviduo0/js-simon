@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 .hidden{
@@ -14,6 +15,17 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    background: linear-gradient(270deg, #2d9f7d, #2d9e9f);
+    background-size: 400% 400%;
+
+    animation: AnimationName 3s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
     .elements_container{
@@ -21,10 +33,18 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: #fff;
     }
 
+        .timer{
+            position:absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 40px;
+        }
+
         .numeri_generati{
-            font-size: 50px;
+            font-size: 100px;
         }
 
         .numeri_scelti{
